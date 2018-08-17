@@ -1,7 +1,21 @@
 /*****BASE STYLES*****/
-h1 h2{
+h1{
   font-family: 'Happy Monkey', cursive;
+  }
+h2{
+  font-family: 'Happy Monkey', cursive;
+  text-align: center;
 }
 p{
   font-family: 'Roboto', sans-serif;
+}
+/***** GRID *****/
+.full-width {
+  width: 1400px;
+  margin: 0 auto;
+	overflow: auto;
+}
+.half-width {
+	width: 700px;
+	float: left;
 }
