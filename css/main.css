@@ -20,6 +20,20 @@ header h1{
   color: #0000cc;
   padding: 65px 0 65px 20px;
   }
+nav{
+  float: right;
+  padding: 250px 25px;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 30px;
+  color: #0000cc;
+  padding-left: 80px;
+}
 /***** BODY *****/
 h2{
   font-family: 'Happy Monkey', cursive;
