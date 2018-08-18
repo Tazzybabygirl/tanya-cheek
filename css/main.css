@@ -35,6 +35,11 @@ nav ul li a{
   padding-left: 80px;
 }
 /***** BODY *****/
+#about {
+  background: url(../img/about-me.png);
+  background-size: cover;
+  height: 700px;
+}
 h2{
   font-family: 'Happy Monkey', cursive;
   font-size: 40px;
