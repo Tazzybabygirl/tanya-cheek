@@ -1,8 +1,26 @@
-h1{
+/***** GRID *****/
+.full-width {
+  width: 1400px;
+  margin: 0 auto;
+	overflow: auto;
+}
+.half-width {
+	width: 700px;
+	float: left;
+}
+/***** HEADER *****/
+header{
+  height: 700px;
+  background: url(../img/hero-background.png);
+  background-size: cover;
+}
+header h1{
   font-family: 'Happy Monkey', cursive;
   font-size: 80px;
   color: #0000cc;
+  padding: 65px 0 65px 20px;
   }
+/***** BODY *****/
 h2{
   font-family: 'Happy Monkey', cursive;
   font-size: 40px;
@@ -25,14 +43,4 @@ p{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: #730099;
-}
-/***** GRID *****/
-.full-width {
-  width: 1400px;
-  margin: 0 auto;
-	overflow: auto;
-}
-.half-width {
-	width: 700px;
-	float: left;
 }
