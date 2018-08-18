@@ -18,7 +18,7 @@ header h1{
   font-family: 'Happy Monkey', cursive;
   font-size: 80px;
   color: #0000cc;
-  padding: 65px 0 65px 20px;
+  padding: 180px 0 65px 20px;
   }
 nav{
   float: right;
@@ -36,9 +36,12 @@ nav ul li a{
 }
 /***** BODY *****/
 #about {
-  background: url(../img/about-me.png);
+  background: url(../img/about.png);
   background-size: cover;
   height: 700px;
+}
+#about p{
+  padding-left: 90px;
 }
 h2{
   font-family: 'Happy Monkey', cursive;
