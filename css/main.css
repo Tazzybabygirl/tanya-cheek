@@ -1,13 +1,30 @@
-/*****BASE STYLES*****/
 h1{
   font-family: 'Happy Monkey', cursive;
+  font-size: 80px;
+  color: #0000cc;
   }
 h2{
   font-family: 'Happy Monkey', cursive;
+  font-size: 40px;
   text-align: center;
+  color: #0000cc;
+  }
+/*****#mywork {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 30px;
+  text-align: center;
+  color: #730099;
+  }*****/
+h3{
+  font-family: 'Happy Monkey', cursive;
+  font-size: 30px;
+  text-align: center;
+  color: #cc0099;
 }
 p{
   font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #730099;
 }
 /***** GRID *****/
 .full-width {
