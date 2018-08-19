@@ -49,12 +49,6 @@ h2{
   text-align: center;
   color: #0000cc;
   }
-/*****#mywork {
-  font-family: 'Happy Monkey', cursive;
-  font-size: 30px;
-  text-align: center;
-  color: #730099;
-  }*****/
 h3{
   font-family: 'Happy Monkey', cursive;
   font-size: 30px;
@@ -68,12 +62,11 @@ p{
 }
 /***** CONTACT *****/
 #contact .full-width{
-	background-color: #d11aff;
-	padding: 110px 0;
+	background-color: #d580ff;
 }
 #contact #contact-image{
 	margin-left: 25px;
-	border: 12px solid #730099;
+	border: 8px solid #730099;
 }
 #contact h2, #contact #email-header, #contact #socialmedia-header, #contact ul {
     padding-left: 115px;
