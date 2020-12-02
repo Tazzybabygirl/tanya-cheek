@@ -3,9 +3,5 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 node_modules
 dist
-<<<<<<< HEAD
 .cache
 .DS_Store
-=======
-.cache
->>>>>>> 7c4b6364801ba6446cc7ce214df7d24a02d0223f
