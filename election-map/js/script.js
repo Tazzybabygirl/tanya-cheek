@@ -1,23 +1,4 @@
-var newPolitician = function (candidateName, partyColor)
-  {
-  var politician = {};
-  politician.name = candidateName;
-  politician.results = null;
-  politician.votes = 0;
-  politician.partyColor = partyColor;
-
-
-  politician.totalVotes = function()
-{
-  this.votes = 0;
-  for (var i = 0; i < this.results.length; i++)
-  {
-    this.votes = this.votes + this.results[i];
-  }
-  };
-    return politician;
-  };
-  var chris = newPolitician("Christopher Columbus", [132, 17, 11]);
+var chris = newPolitician("Christopher Columbus", [132, 17, 11]);
   var george = newPolitician("George Washington", [245, 141, 136]);
 
 chris.results = [5, 1, 7, 2, 33, 6, 4, 2, 1, 14, 8, 3, 1, 11, 11, 0, 5, 3, 3, 3, 7, 4, 8, 9, 3, 7, 2, 2, 4, 2, 8, 3, 15, 15, 2, 12, 0, 4, 13, 1, 3, 2, 8, 21, 3, 2, 11, 1, 3, 7, 2];
@@ -44,33 +25,12 @@ console.log(george.results);
 console.log(george.votes);
 console.log("George's color is: "+ george.partyColor);
 
-var winner = "???";
-
-  if (george.votes > chris.votes)
-  {
-    winner = george.name;
-  }
-else if (george.votes < chris.votes)
-{
-  winner = chris.name;
-}
-else
-{
-  winner = "DRAW."
-}
+var winner = determineWinner(george, chris);
 console.log("And the Winner is..." + winner + "!!!");
 
 var setStateResults = function (state)
 {
-  theStates[state].winner = null;
-  if (chris.results[state] > george.results[state])
-  {
-    theStates[state].winner = chris;
-  }
-  else if (chris.results[state] < george.results[state])
-  {
-    theStates[state].winner = george;
-  }
+  theStates[state].winner = determineStateWinner(chris, george, state);
 
 var stateTable = document.getElementById('stateResults');
 var header = stateTable.children[0];
