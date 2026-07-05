@@ -14,70 +14,30 @@ var partyButton = document.getElementById("partyTimeButton");
 var updateClock = function() {
 	var timeEventJS = document.getElementById("timeEvent");
 	var lolcat = document.getElementById("lolcat");
-	var image =
-		"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg";
 
-	if (time == partyTime) {
-		image =
-			"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat4.jpg";
-		messageText = "IZ PARTEE TIME!!";
-	} else if (time == napTime) {
-		image =
-			"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat3.jpg";
-		messageText = "IZ NAP TIME...";
-	} else if (time == lunchTime) {
-		image =
-			"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat2.jpg";
-		messageText = "IZ NOM NOM NOM TIME!!";
-	} else if (time == wakeUpTime) {
-		image =
-			"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat1.jpg";
-		messageText = "IZ TIME TO GETTUP.";
-	} else if (time < noon) {
-		image =
-			"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/08/normalTime.jpg";
-		messageText = "Good morning!";
-	} else if (time > evening) {
-		image =
-			"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat5.jpg";
-		messageText = "Good Evening!";
-	} else {
-		image =
-			"https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat5.jpg";
-		messageText = "Good afternoon!";
-	}
+	var timeEvent = getTimeEvent(time, {
+		noon: noon,
+		evening: evening,
+		wakeUpTime: wakeUpTime,
+		lunchTime: lunchTime,
+		partyTime: partyTime,
+		napTime: napTime
+	});
+	messageText = timeEvent.messageText;
 
 	timeEventJS.innerText = messageText;
-	lolcat.src = image;
+	lolcat.src = timeEvent.image;
 
 	var showCurrentTime = function() {
 		var clock = document.getElementById("clock");
-
 		var currentTime = new Date();
 
-		var hours = currentTime.getHours();
-		var minutes = currentTime.getMinutes();
-		var seconds = currentTime.getSeconds();
-		var meridian = "AM";
-
-		if (hours >= noon) {
-			meridian = "PM";
-		}
-		if (hours > noon) {
-			hours = hours - 12;
-		}
-
-		if (minutes < 10) {
-			minutes = "0" + minutes;
-		}
-
-		if (seconds < 10) {
-			seconds = "0" + seconds;
-		}
-
-		var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian + "!";
-
-		clock.innerText = clockTime;
+		clock.innerText = formatClockTime(
+			currentTime.getHours(),
+			currentTime.getMinutes(),
+			currentTime.getSeconds(),
+			noon
+		);
 	};
 	showCurrentTime();
 };
